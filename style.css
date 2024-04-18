@@ -1,0 +1,74 @@
+@import url('https://fonts.font.im/css?family=Do+Hyeon|Ubuntu');
+
+*{
+  box-sizing:border-box;
+}
+body{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.magic{
+  border:0;
+  z-index:10;
+  position:absolute;
+  top:90px;
+  height:40px;
+  color:white;
+  font-size:20px;
+  letter-spacing:3px;
+  font-family:'Do Hyeon', sans-serif;
+  background-color: rgb(209, 179, 239);
+  border-radius:5px;
+  box-shadow:0 3px 2px blueviolet;
+}
+.magic:active{
+  box-shadow:none;
+  transform: translateY(3px);
+}
+.boxes{
+  width: 480px;
+  height:480px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  transition:0.9s ease;
+  position:relative;
+}
+.boxes.big{
+  width:540px;
+  height:550px;
+}
+.boxes.big .box{
+  transform:rotateZ(360deg);
+}
+.box{
+  background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2hzejNleTVzbGFzbmwyb2lxaWl0ZW4xcWEyam05cnVoYTI1YWVyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1fTJfADySKeKgKDuDE/giphy-downsized-large.gif");
+  background-repeat: no-repeat;
+  width:120px;
+  height:120px;
+  position:relative;
+  transition:0.9s ease;
+}
+.box::after{
+  content:'';
+  background-color:rgba(46, 18, 225, 0.858);
+  position:absolute;
+  height: 100%;
+  width: 10px;
+  right:-10px;
+  top:5px;
+  transform:skewY(45deg);
+}
+.box::before{
+  content:'';
+  background-color:blueviolet;
+  position:absolute;
+  height:10px;
+  width:100%;
+  bottom:-10px;
+  left:5.5px;
+  transform:skewX(45deg)
+}
